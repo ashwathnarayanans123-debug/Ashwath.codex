@@ -1,0 +1,38 @@
+body{
+    
+    background-color:lightseagreen;
+
+}
+.a{
+    background-color:red;
+}
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 30;
+
+}
+.b{
+    background-color: yellow;
+}
+p{
+    font-size: 20;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.grid{
+    display: grid;
+    border: 5px solid red;
+    grid-template-rows: repeat(auto-fit,minmax(100px,1fr));
+     
+
+}
+.card{
+    margin: 10px;
+    padding: 20px;
+    border: 5px solid purple;
+    background-color: blue;
+
+}
+.fex{
+    display: flex;
+    flex: end;
+    j 
