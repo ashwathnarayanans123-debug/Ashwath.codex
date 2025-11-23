@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #45a049;
+}
+
+#userSection, #adminSection {
+    padding: 20px;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#busList, #etaDisplay, #routeInfo {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#buses, #adminBuses {
+    list-style-type: none;
+    padding: 0;
+}
+
+#buses li, #adminBuses li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+#buses li:hover, #adminBuses li:hover {
+    background-color: #f9f9f9;
+}
+
+form {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+form input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+#signInSection, #signUpSection, #chatSection, #gamesSection, #sosSection, #voiceSection {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#chatMessages {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#chatInput {
+    width: 80%;
+    padding: 10px;
+}
+
+#gameArea {
+    margin-top: 20px;
+}
+
+.tic-tac-toe-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+}
+
+.tic-tac-toe-cell {
+    background-color: #f0f0f0;
+    border: 2px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    cursor: pointer;
+}
+
+.puzzle-board {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: repeat(4, 80px);
+    gap: 2px;
+    margin: 20px auto;
+}
+
+.puzzle-cell {
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.puzzle-cell.empty {
+    background-color: #f0f0f0;
+}
+
+#voiceStatus {
+    font-size: 18px;
+    color: #666;
+    margin: 15px 0;
+}
+
+#voiceResponse {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 15px;
+    min-height: 50px;
+}
+
+#startVoice {
+    background-color: #2196F3;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#startVoice:hover {
+    background-color: #0b7dda;
+}
+
+@media (max-width: 768px) {
+    #userSection, #adminSection, #signInSection, #signUpSection, #chatSection, #gamesSection, #sosSection, #voiceSection {
+        padding: 10px;
+    }
+    nav button {
+        display: block;
+        margin: 5px auto;
+    }
+    .tic-tac-toe-board {
+        grid-template-columns: repeat(3, 60px);
+        grid-template-rows: repeat(3, 60px);
+    }
+    .puzzle-board {
+        grid-template-columns: repeat(4, 60px);
+        grid-template-rows: repeat(4, 60px);
+    }
+}

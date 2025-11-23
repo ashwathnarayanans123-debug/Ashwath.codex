@@ -1,0 +1,44 @@
+{
+  "routes": [
+    {
+      "id": 1,
+      "name": "Route 1: MG Road to Kempegowda International Airport",
+      "stops": [
+        {"id": 1, "name": "MG Road", "lat": 12.9758, "lng": 77.6033},
+        {"id": 2, "name": "Cubbon Park", "lat": 12.9766, "lng": 77.5929},
+        {"id": 3, "name": "Kempegowda International Airport", "lat": 13.1989, "lng": 77.7068}
+      ],
+      "schedule": {"first": "06:00", "last": "22:00", "frequency": 30}
+    },
+    {
+      "id": 2,
+      "name": "Route 2: Majestic to Whitefield",
+      "stops": [
+        {"id": 4, "name": "Majestic", "lat": 12.9777, "lng": 77.5688},
+        {"id": 5, "name": "Rajajinagar", "lat": 12.9889, "lng": 77.5543},
+        {"id": 6, "name": "Whitefield", "lat": 12.9698, "lng": 77.7500}
+      ],
+      "schedule": {"first": "05:30", "last": "23:00", "frequency": 20}
+    }
+  ],
+  "buses": [
+    {
+      "id": 1,
+      "routeId": 1,
+      "currentStop": 1,
+      "lat": 12.9758,
+      "lng": 77.6033,
+      "speed": 40,
+      "status": "moving"
+    },
+    {
+      "id": 2,
+      "routeId": 2,
+      "currentStop": 4,
+      "lat": 12.9777,
+      "lng": 77.5688,
+      "speed": 35,
+      "status": "moving"
+    }
+  ]
+}

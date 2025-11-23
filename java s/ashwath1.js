@@ -1,2 +1,1 @@
-let name="a";
-console.log("name");
+ console.log("a");

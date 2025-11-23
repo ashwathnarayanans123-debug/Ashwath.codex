@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartCommute - Real-Time Bus Tracking</title>
+    <link rel="stylesheet" href="smart.css">
+    <!-- 
+        IMPORTANT: You need to add your own Google Maps API key below
+        
+        QUICK START - Get your FREE API key in 5 minutes:
+        1. Go to: https://console.cloud.google.com/
+        2. Click "Select a project" → "New Project" → Name it "SmartCommute" → Create
+        3. Wait for project creation, then click "Enable APIs and Services"
+        4. Search for "Maps JavaScript API" → Click it → Click "Enable"
+        5. Click "Credentials" (left sidebar) → "Create Credentials" → "API Key"
+        6. Copy your new API key
+        7. Replace YOUR_GOOGLE_MAPS_API_KEY below with your copied key
+        
+        Note: The free tier includes $200 credit per month, which is plenty for testing!
+        
+        ALTERNATIVE FOR TESTING: You can use OpenStreetMap instead (no API key needed)
+        See the file "smart-openstreetmap.html" for a version without Google Maps
+    -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"></script>
+</head>
+<body>
+    <header>
+        <h1>SmartCommute</h1>
+        <nav>
+            <button id="signInBtn">Sign In</button>
+            <button id="userView">User View</button>
+            <button id="adminView">Admin Dashboard</button>
+            <button id="chatBtn">AI Chat</button>
+            <button id="gamesBtn">Games</button>
+            <button id="voiceBtn">Voice Assistant</button>
+        </nav>
+    </header>
+
+    <div id="userSection">
+        <div id="map"></div>
+        <div id="busList">
+            <h2>Active Buses</h2>
+            <ul id="buses"></ul>
+        </div>
+        <div id="etaDisplay">
+            <h2>Estimated Time of Arrival</h2>
+            <p id="etaInfo">Select a bus to see ETA</p>
+        </div>
+        <div id="routeInfo">
+            <h2>Route Information</h2>
+            <select id="routeSelect"></select>
+            <div id="routeDetails"></div>
+        </div>
+    </div>
+
+    <div id="adminSection" style="display: none;">
+        <h2>Admin Dashboard</h2>
+        <form id="addBusForm">
+            <input type="text" id="busId" placeholder="Bus ID" required>
+            <input type="number" id="routeId" placeholder="Route ID" required>
+            <input type="number" id="lat" placeholder="Latitude" step="0.0001" required>
+            <input type="number" id="lng" placeholder="Longitude" step="0.0001" required>
+            <button type="submit">Add Bus</button>
+        </form>
+        <div id="fleetMonitor">
+            <h3>Fleet Monitor</h3>
+            <ul id="adminBuses"></ul>
+        </div>
+    </div>
+
+    <div id="signInSection" style="display: none;">
+        <h2>Sign In</h2>
+        <form id="signInForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Sign In</button>
+        </form>
+        <p>Don't have an account? <a href="#" id="showSignUp">Sign Up</a></p>
+        <p id="signInMessage"></p>
+    </div>
+
+    <div id="signUpSection" style="display: none;">
+        <h2>Sign Up</h2>
+        <form id="signUpForm">
+            <input type="text" id="newUsername" placeholder="Username" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="newPassword" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="#" id="showSignIn">Sign In</a></p>
+        <p id="signUpMessage"></p>
+    </div>
+
+    <div id="chatSection" style="display: none;">
+        <h2>AI Chat Assistant</h2>
+        <div id="chatMessages"></div>
+        <input type="text" id="chatInput" placeholder="Ask me anything about commuting...">
+        <button id="sendChat">Send</button>
+    </div>
+
+    <div id="voiceSection" style="display: none;">
+        <h2>Voice Assistant</h2>
+        <button id="startVoice">Start Voice Command</button>
+        <p id="voiceStatus">Click to start voice recognition</p>
+        <div id="voiceResponse"></div>
+    </div>
+
+    <div id="gamesSection" style="display: none;">
+        <h2>Time Pass Games</h2>
+        <button id="ticTacToeBtn">Play Tic-Tac-Toe</button>
+        <button id="puzzleBtn">Play Puzzle</button>
+        <div id="gameArea"></div>
+    </div>
+
+    <div id="sosSection" style="display: none;">
+        <h2>Emergency SOS</h2>
+        <button id="sosBtn" style="background-color: red; color: white; font-size: 24px; padding: 20px;">SOS - Call Emergency</button>
+        <p id="sosMessage"></p>
+    </div>
+
+    <script src="smart.js"></script>
+</body>
+</html>

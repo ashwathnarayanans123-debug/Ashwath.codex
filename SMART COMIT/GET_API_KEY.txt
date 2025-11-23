@@ -1,0 +1,87 @@
+========================================
+HOW TO GET YOUR FREE GOOGLE MAPS API KEY
+========================================
+
+Follow these simple steps to get your API key in 5 minutes:
+
+STEP 1: Go to Google Cloud Console
+-----------------------------------
+Open your browser and go to: https://console.cloud.google.com/
+
+
+STEP 2: Create a New Project
+-----------------------------
+1. Click "Select a project" at the top
+2. Click "NEW PROJECT"
+3. Enter project name: "SmartCommute"
+4. Click "CREATE"
+5. Wait a few seconds for the project to be created
+
+
+STEP 3: Enable Maps JavaScript API
+-----------------------------------
+1. Click "Enable APIs and Services" (big blue button)
+2. In the search box, type: "Maps JavaScript API"
+3. Click on "Maps JavaScript API" from the results
+4. Click the blue "ENABLE" button
+5. Wait for it to enable (takes a few seconds)
+
+
+STEP 4: Create API Key
+-----------------------
+1. Click "Credentials" in the left sidebar
+2. Click "CREATE CREDENTIALS" at the top
+3. Select "API Key"
+4. Your API key will be created and displayed!
+5. Click "COPY" to copy your API key
+
+
+STEP 5: Add API Key to Your App
+--------------------------------
+1. Open the file: smart.html
+2. Find this line (around line 25):
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap"></script>
+
+3. Replace YOUR_GOOGLE_MAPS_API_KEY with your copied API key
+
+Example:
+   Before: key=YOUR_GOOGLE_MAPS_API_KEY
+   After:  key=AIzaSyABC123def456GHI789jkl012MNO345pqr
+
+4. Save the file
+
+
+STEP 6: Test Your App
+----------------------
+1. Double-click smart.html to open it in your browser
+2. The map should now load correctly!
+
+
+IMPORTANT NOTES:
+================
+✓ The free tier includes $200 credit per month
+✓ This is more than enough for testing and personal use
+✓ No credit card required for the free tier
+✓ Keep your API key private - don't share it publicly
+
+
+TROUBLESHOOTING:
+================
+If the map doesn't load:
+1. Check if you copied the entire API key
+2. Make sure there are no extra spaces
+3. Verify the Maps JavaScript API is enabled
+4. Check browser console (F12) for error messages
+
+
+ALTERNATIVE: Use OpenStreetMap (No API Key Needed)
+===================================================
+If you don't want to get an API key, you can use the OpenStreetMap version:
+- Open: smart-openstreetmap.html (will be created if needed)
+- No API key required!
+- Works immediately
+
+
+Need Help?
+==========
+Check the README.md file for more detailed instructions and troubleshooting tips.

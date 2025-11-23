@@ -1,0 +1,29 @@
+# SmartCommute App Development TODO
+
+- [x] Create data.json with sample database (routes, buses, stops)
+- [x] Update smart.html for UI structure (map, bus list, ETA display, admin dashboard)
+- [x] Update smart.css for responsive styling
+- [x] Update smart.js for app logic (load data, simulate GPS, calculate ETA, admin functions)
+- [x] Test app by opening in browser
+- [x] Add sign-in page with localStorage session
+- [x] Add AI chat assistant with mock responses
+- [x] Add SOS emergency feature
+- [x] Add time pass games (tic-tac-toe and simple puzzle)
+- [x] Update UI and styling for new features
+- [x] Test enhanced app
+- [x] Add sign-up page
+- [x] Improve AI chat assistant
+- [x] Change map to Karnataka (Bangalore) for bus tracking
+- [x] Add BMTC bus numbers for tracking
+- [x] Test updated app
+- [x] Replace Leaflet map with Google Maps API
+- [x] Add voice assistant for bus tracking commands
+- [x] Implement IndexedDB for sign-in history storage
+- [x] Fix missing Google Maps API key instructions
+- [x] Add missing CSS for Voice and Sign-Up sections
+- [x] Fix puzzle board grid dimensions in mobile view
+- [x] Create README.md with setup instructions
+- [ ] Expand data.json with more BMTC bus routes and details
+- [ ] Enhance GPS bus tracking simulation
+- [ ] Update UI for voice assistant and database features
+- [ ] Test updated app with new features
